@@ -1,0 +1,9 @@
+streamlit==1.36.0
+pandas>=2.0.0
+geopy>=2.4.0
+networkx>=3.2.1
+folium>=0.16.0
+streamlit-folium>=0.20.0
+fpdf>=1.7.2
+xlsxwriter>=3.2.0
+requests>=2.31.0
