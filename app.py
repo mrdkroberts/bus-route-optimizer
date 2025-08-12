@@ -25,9 +25,15 @@ with st.sidebar:
     st.markdown("---")
     st.caption("CSV required columns: either **name, stop_address** or **name, stop_id, stop_address**. Extra columns are okay.")
 
-# File upload & school input
-school_address = st.text_input("School address (full)", placeholder="e.g., 123 School Ln, Raleigh, NC")
+# File upload & addresses
+col1, col2 = st.columns(2)
+with col1:
+    start_address = st.text_input("Starting location (full)", placeholder="e.g., 1 Depot Rd, Your City, State")
+with col2:
+    school_address = st.text_input("Destination school address (full)", placeholder="e.g., 123 School Ln, Your City, State")
+
 uploaded = st.file_uploader("Upload CSV of students grouped into stops", type=["csv"])
+
 
 # Helpers
 def geocode_address(geocoder, address: str):
